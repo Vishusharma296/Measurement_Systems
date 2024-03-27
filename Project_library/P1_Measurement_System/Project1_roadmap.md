@@ -4,9 +4,11 @@ Start date: 24.03.2024
 
 Tasks to achieve:
 
-# Project 1) Create a measurement system with RP picoW board, RP400, BMP280 sensor and other hardware
+# Project 1: Wireless Sensor Data Measurement and Visualization System 
+
+Project Goal: To build a measurement system with RP picoW board, RP400, BMP280 sensor and other hardware
   
-  Features: 
+  #### Features: 
   
   - Wirelessly transmit the sensor data to RP400 1) Using MQTT , 2) Using HTTP
   - Log the data in CSV files 1) - Using node red, 2) - Using python scripts
