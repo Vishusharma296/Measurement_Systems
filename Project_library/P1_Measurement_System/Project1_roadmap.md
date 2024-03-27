@@ -46,8 +46,29 @@ Tasks to achieve:
 - Paho Client
 - Publisher scripts
 - Subscriber scripts
+ 
+## Sub Project 1.2) Concurrent programming in Micro Python
 
-## Subproject 1.2) HTML 
+- Event driven programming
+- Multi-threading
+- Cooperative vs preemptive multithreading
+- Coroutines, Lightweight threads
+- Deadlocks
+- Race conditions
+- Asynchronous functions
+- Locks
+- Semaphores 
+- Scheduling
+- Concurrency Primitives
+- Asynchronous I/O
+- Queues
+- Event loops, Event flags, Event Handlers, Event Emitters
+- Awaitable Objects
+- Shared resources
+- Callbacks
+- Design of concurrency model
+
+## Subproject 1.3) HTML 
 
 #### HTML
 
@@ -72,34 +93,27 @@ Tasks to achieve:
 - Responsive Webdesign
 - Web accesibility and Aria roles
 
+## subproject 1.4) Database system
 
-- Important tags
- 
-## Sub Project 1.2) Concurrent programming in Micro Python
+- Local server and CSV files
+- PostgreSQL
+- Influx DB
 
-- Event driven programming
-- Multi-threading
-- Cooperative vs preemptive multithreading
-- Coroutines, Lightweight threads
-- Deadlocks
-- Race conditions
-- Asynchronous functions
-- Locks
-- Semaphores 
-- Scheduling
-- Concurrency Primitives
-- Asynchronous I/O
-- Queues
-- Event loops, Event flags, Event Handlers, Event Emitters
-- Awaitable Objects
-- Shared resources
-- Callbacks
-- Design of concurrency model
 
 ## Subproject 1.5) Node-Red dashboards
 
-Tasks: 
-Create a Node Red dashboard which displays the sensor data
-
+Tasks: Create a Node Red dashboard which displays the sensor data
+- Node-red inbuilt dashboards
+- Graffana Dashboards
 
 ## Project 1.4) Github 
+
+- Installing Git
+- Configuring Git with email, SSH keys
+- Documentation via Markdown, Project management
+- Version control via branching
+- Collaboration
+- Issue tracking
+- Continous Integration and development CI/CD
+- Branches, Issues, Milestones, pull requests, code reviews
+
