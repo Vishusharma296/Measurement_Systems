@@ -1,66 +1,112 @@
 April 2024
 
-24.03.2024
+Start date: 24.03.2024
 
 Tasks to achieve:
 
-
-Goals: 
-
-### Project 1) Create a measurement system with pico board and BMP280 sensor
+# Project 1) Create a measurement system with RP picoW board, RP400, BMP280 sensor and other hardware
   
-  features: 
+  Features: 
   
-  Wirelessly transmit the sensor data to RP400 1) Using MQTT , 2) Using HTTP
-  Log the data in CSV files 1) - Using node red, 2) - Using python scripts
-  Display the data on a dashboard from Node - Red
-  Presentation - 
+  - Wirelessly transmit the sensor data to RP400 1) Using MQTT , 2) Using HTTP
+  - Log the data in CSV files 1) - Using node red, 2) - Using python scripts
+  - Display the data on a dashboard from 1) Node - Red, HTML based page
+  - Presentation: Option to download images from specific timestamps, option to save data in CSV
+  - Networking: Dashboard accesible to other non-admin user via HTTP/API/MQTT
+  - Building a local data server on RP400
   
-  
-*Skills to learn:*
+## Skills to learn
  
+ - HTTP Protocol (python and micropython libraries)
+ - MQTT Protocol
+ - Working with HTML
+ - Working with concurrent programming in Micropython
+ - Node-red dashboard - creation and accesing it remotely
+ - Github - Project documentation Markdown files, CLI commands, Branches, Security
+ - Working with APIs in Python and Micropython
+ - Designing a GUI in Python (TKinter)
+ - SQL and database systems
+ - Python Django framework
+ - PostgreSQL
+ - Time Series Database - InfluxDB
+ - Graffana Dashboard
  
- HTTP Protocol (python and micropython libraries)
- Working with APIs in Python
- Node-red dashboard - creation and accesing it remotely
- Github - (Documentation (Markdown files), CLI, Branches, Security)
- Working with multi-threading in Micro Python
- 
- 
-Sub Project 1.1) HTTP and MQTT in Micro Python 
+## Subproject 1.1) HTTP and MQTT in Micro Python 
 
------  HTTP -----
+### HTTP
 
-urequest, ujson
- 
- 
- 
-Sub Project 1.2) Multi-threading in Micro Python
+- urequest 
+- ujson
 
-Executing multiple tasks concurrently within a single program
-Lightweight threads / Croutines /green threads
-Tasks that can be performed concurrently - handling user Input, background calculations, communicating with external devices
-Cooperative vs preemptive threading
-Deadlocks and avoiding deadlocks by careful design of concurrency model
-Race conditions - outcome of program depends on the timing or interleaving of operations between multiplethreads
-It happens due to threads sharing resources without proper synchronization / Without proper locking / inconsistent interleaving of operations.
+### MQTT
 
-Syncronization mechanisms - locks, semaphores and concurrency primitives, Asynchronous I/O, Event driven programming
-Concurrency in Micro Python - Coroutines, cooperative multitasking, concurrency primitives
- 
-Communication between threads - Shared data structure, Queues, Event flags, shared resources (files, sockets, peripherals), message passing / callbacks
- 
- 
-### Project 1.3) Node-Red dashboards
+- Pub-sub model
+- umqtt
+- Mosquito broker
+- Paho Client
+- Publisher scripts
+- Subscriber scripts
+
+## Subproject 1.2) HTML 
+
+#### HTML
+
+- HTML - opening and closing tags 
+- Index     
+- Title     
+- Head     
+- Body     
+- Headers tags h1, h2, ...h6 
+- Breaks  
+- Paragraphs 
+- Horizontal rule 
+- Comments
+- Lists: Ordered and unordered lists
+- Hyperlinks
+- Inserting images, audio, video
+- Buttons
+- Forms
+- Tables
+- Metadata
+- HTML APIs - Geolocation, local storage, canvas
+- Responsive Webdesign
+- Web accesibility and Aria roles
 
 
-### Project 1.4) Github 
+- Important tags
+ 
+## Sub Project 1.2) Concurrent programming in Micro Python
+
+- Event driven programming
+- Multi-threading
+- Cooperative vs preemptive multithreading
+- Coroutines, Lightweight threads
+- Deadlocks
+- Race conditions
+- Asynchronous functions
+- Locks
+- Semaphores 
+- Scheduling
+- Concurrency Primitives
+- Asynchronous I/O
+- Queues
+- Event loops, Event flags, Event Handlers, Event Emitters
+- Awaitable Objects
+- Shared resources
+- Callbacks
+- Design of concurrency model
+
+## Subproject 1.5) Node-Red dashboards
+
+Tasks: 
+Create a Node Red dashboard which displays the sensor data
+
+
+## Project 1.4) Github 
 
 
 
 ### Project 3) PCB design
-
-
 
 ### Project 4) Hypersonic flow, 
 
@@ -73,6 +119,7 @@ Plasma around surfaces,
 
 
 ### Project 5) Telemetry
+
 Telemetry in space as used by professional space agencies
 
 
@@ -84,7 +131,9 @@ Telemetry in space as used by professional space agencies
 - Deffie-Hellman algorithm
 - Hardware encryption 
 
-### Project 7) 
+### Project 7) Python Django Framework
+
+### Project 8) SQL and Databases
 
 
 
