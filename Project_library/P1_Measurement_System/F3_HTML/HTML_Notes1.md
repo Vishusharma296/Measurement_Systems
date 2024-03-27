@@ -1,0 +1,78 @@
+# HTML Topics Mindmap
+
+- **HTML**
+  - Basic Structure
+    - Doctype
+    - `<html>`
+    - `<head>`
+    - `<title>`
+    - `<body>`
+  - Text Formatting
+    - `<p>`
+    - `<h1>` to `<h6>`
+    - `<strong>`
+    - `<em>`
+  - Lists
+    - `<ul>`
+    - `<ol>`
+    - `<li>`
+  - Links and Images
+    - `<a>`
+    - `<img>`
+    - Attributes
+      - `src`
+      - `alt`
+  - Buttons
+    - Radio buttons
+    - General buttons
+  - Forms
+    - `<form>`
+    - `<input>`
+    - `<textarea>`
+    - `<button>`
+  - Tables
+    - `<table>`
+    - `<tr>`
+    - `<td>`
+    - `<th>`
+  - Semantic HTML
+    - `<header>`
+    - `<nav>`
+    - `<main>`
+    - `<article>`
+    - `<section>`
+    - `<footer>`
+  - Multimedia
+    - `<audio>`
+    - `<video>`
+  - Metadata
+    - `<meta>`
+  - HTML Entities
+    - `&amp;`
+    - `&lt;`
+    - `&gt;`
+  - Validation and Best Practices
+    - HTML Validation
+    - Clean Code Practices
+  - Accessibility
+    - ARIA Roles and Attributes
+
+- **Advanced Topics**
+  - Responsive Web Design
+    - Viewport Meta Tag
+    - Media Queries
+  - HTML5 APIs
+    - Geolocation
+    - LocalStorage
+    - Canvas
+  - Version Control
+    - Git
+    - Branching/Merging
+
+- **Project Ideas**
+  - Personal Portfolio Website
+  - Blog
+  - E-commerce Website Prototype
+  - Responsive Landing Page
+  - Web Application UI Design
+
