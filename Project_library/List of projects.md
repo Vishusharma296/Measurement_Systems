@@ -76,11 +76,15 @@ Plasma around surfaces,
 Telemetry in space as used by professional space agencies
 
 
-### Project 6) cyber security and cryptography
+### Project 6) Cyber security and cryptography
+
 - Elleiptic curve cryptography
-- Public key, private key 
+- Public key, private key cryptography 
 - RSA
-- Deffie -Hellman algorithm
+- Deffie-Hellman algorithm
+- Hardware encryption 
+
+### Project 7) 
 
 
 
