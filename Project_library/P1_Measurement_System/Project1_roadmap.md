@@ -107,6 +107,7 @@ Project Goal: To build a measurement system with RP picoW board, RP400, BMP280 s
 Tasks: Create a Node Red dashboard which displays the sensor data
 - Node-red inbuilt dashboards
 - Graffana Dashboards
+- Flowfuse dashboards : [Flowfuse](https://flows.nodered.org/node/@flowfuse/node-red-dashboard)
 
 ## Project 1.4) Github 
 
