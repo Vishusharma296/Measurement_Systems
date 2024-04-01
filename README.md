@@ -1,3 +1,3 @@
 # Masurement Systems
 
-Centaral repository for wireless sensor data measurement system
+Repository for wireless sensor data measurement system. 
