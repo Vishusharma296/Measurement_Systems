@@ -102,15 +102,17 @@ Project Goal: To build a measurement system with RP picoW board, RP400, BMP280 s
 - Influx DB
 
 
-## Subproject 1.5) Node-Red dashboards
+## Subproject 1.5) Node-Red flows and creating dashboards
 
 Tasks: Create a Node Red dashboard which displays the sensor data
+- Node-red basics : [Node-red](https://nodered.org/)
 - Node-red inbuilt dashboards
-- Graffana Dashboards
+- Graffana Dashboards : [Grafana](https://grafana.com/docs/grafana/latest/)
 - Flowfuse dashboards : [Flowfuse](https://flows.nodered.org/node/@flowfuse/node-red-dashboard)
 
-## Project 1.4) Github 
+## Subproject 1.7) Github 
 
+- Github basics [Github](https://docs.github.com/en)
 - Installing Git
 - Configuring Git with email, SSH keys
 - Documentation via Markdown, Project management
@@ -120,3 +122,19 @@ Tasks: Create a Node Red dashboard which displays the sensor data
 - Continous Integration and development CI/CD
 - Branches, Issues, Milestones, pull requests, code reviews
 
+## Subproject 1.8) Containerization with Docker 
+- Need for Containerization
+- Introduction to docker: [Docker]( https://docs.docker.com/)
+- Installation on linux machine
+- Docker Conatainer basics
+- Kubernetes Basics
+- Creating docker images, dockerfile
+- Docker CLI
+- Container Orchestraion, Docker Compose
+- Networking - Connecting Containers
+- Docker Hub
+- Docker Registry
+- Docker Security
+- Docker Swarm for scaling
+- Docker SDKs and APIs
+- Docker Multistage builds
