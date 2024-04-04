@@ -1,7 +1,9 @@
 '''
-This script connects to Wifi with input credentials
-Establish the MQTT connection with broker
-If the connection is successfull it publishes JSON messages and flashes an led 
+This script connects rpi picoW to Wifi with given WiFi credentials
+It establishes the MQTT connection with broker at local IP address
+If the connection is successfull it reads the temperature pressure data from BMP280 sensor
+It publishes JSON message containing sensor data and other information
+every 10 seconds and flashes an led for one second on successful publication of message 
 '''
 
 from machine import I2C, Pin
@@ -14,12 +16,12 @@ from bmp280 import *
 
 # WiFi Connection Details
 
-SSID = "VISHU_WIFI"
-PASSWORD = "123456789"
+SSID = "*****"
+PASSWORD = "******"
 
 # MQTT Connection Details
 
-MQTT_BROKER = "192.168.0.103"
+MQTT_BROKER = "192.168.xx.xx"
 BROKER_PORT = 1883
 MQTT_TOPIC = "Pseudo/BMP280"
 CLIENT_ID = "pico_client"
@@ -29,7 +31,6 @@ CLIENT_ID = "pico_client"
 Polling_interval = 10
 label = 1               # label for CSV headers
 count = 0               # Message counter
-
 
 # Pin assignment 
 
@@ -45,7 +46,6 @@ print(scan_result)
 
 # BMP object Settings
 bmp_object = BMP280(i2c_bus, addr = 0x76, use_case = BMP280_CASE_INDOOR)
-
 
 # Function to connect to WiFi
 
@@ -64,7 +64,6 @@ def connect_to_mqtt():
     client.connect()
     print("Connected to MQTT broker")
     return client
-
 
 # Function to read sensor data
     
