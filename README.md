@@ -1,4 +1,4 @@
-# Masurement Systems
+# Measurement Systems
 
 Repository for wireless sensor data measurement system. 
 
