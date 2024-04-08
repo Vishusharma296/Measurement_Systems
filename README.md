@@ -2,9 +2,6 @@
 
 Repository for wireless sensor data measurement system. 
 
-
-
-
 ## Measurement System Phase I
 
 
@@ -17,7 +14,7 @@ Repository for wireless sensor data measurement system.
 - Backend logic for FSA, HSA and other Time-series data analysis functions will be implemented in Python/JavaScript.
 - Initial data manipulation and visualization will be done using Python and Jupyter Notebooks
 - GUI implementation will be done on rpi for interaction with the measurement system (HTML5 or React based) in the later prototypes 2,3 ....
-- Experiments with system architechture will be done by trying and changing communication protocols- (MQTT, HTTP Restful APIs), sensor data logging system (CSV, PostgreSQL, InfluxDB), Data Visualization System (Jupyter notebooks, PowerBI, HTML GUI based pages)
+- Experiments with system architechture will be done by trying and changing communication protocols- (MQTT, HTTP Restful APIs), sensor data logging system (CSV, PostgreSQL, InfluxDB), Data Visualization System (Jupyter notebooks, PowerBI, HTML/React based GUI)
 
 ### Measurement System | Phase 1 | Prototype - 1 | System Architechture
 
@@ -31,26 +28,28 @@ Repository for wireless sensor data measurement system.
 #### Measurement System Phase III
 
 - Building a custom PCB for sensor data acquisition, logging, computing algorithms, and visualization of sensor data using Mobile device with WiFi connection.
-- Cyber Security -- Password protection, Hardware encryption
-- Upload of data to the cloud account/remote server.
-
+- Cyber Security -- Password protection, Hardware encryption, Sensor data encryption using ECC(Elliptic Curve Cryptography) / other suitable crytographic algorithms for IoT devices.
+- Upload of telemetry data to the cloud account/remote server.
 
 #### Hardware specifications for custom PCB:
 
-  Prtotype I
+**Prtotype Hardware Device I**
 
-  - PCB with ESP32/RP2040 | (Wroom/Wrover module), ESP32 S,C series, PicoW board
+  - PCB with ESP32/RP2040 | (Wroom/Wrover module), ESP32 S/C/P series, PicoW board
   - UART-USB bridge | (CP2102)
   - Inbuilt accelerometer/IMU unit | (SPI/I2C)
-  - Inbuilt temperature, humidity, pressure sensor | (Bosch BME280, BMP280 series)
+  - Inbuilt temperature, humidity, pressure sensor | (Bosch BME280, BMP280 series) | (I2C)
   - Inbuilt LDR
-  - Inbuilt Flash storage + removable memory card | (SPI)
-  - Option for programming via SWD and USB | (USB to UART bridge) | CP2102
+  - Inbuilt Flash/EPROM storage + removable memory card support | (SPI)
+  - Option for programming the chip (RP2040) via SWD and USB| (USB to UART bridge) | CP2102
+  - Native USB support, USB OTG, WiFi and BLE capabilities | ESP32 S series chips
   - Power supply via USB and 3.3V cheap Li-ion battery.
   - Charging circuit for Li-ion battery
-  - Programming via USB
+  - Programming via USB interface using MicroPython/Arduino framework/ Embedded C
+  - Future boards to have LoRaWAN communication capabilities by adding the module/SOC | Semtech Sx1276 series chips
 
-#### Functional Software specifications and requirements
+
+#### Functional software specifications and requirements
 
 ### Algorithm and analysis
 
