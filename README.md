@@ -7,9 +7,6 @@ Repository for wireless sensor data measurement system.
 
 ## Measurement System Phase I
 
-### Measurement System | Phase 1 | Prototype - 1 | System Architechture
-
-![System Architechture](Project_library/Measurement_System_Phase_01/Images_Diagrams_Schematics/Images_Schematics/MS1_Phase1_P1_Sys_Architechture_V1.jpg)
 
 ### Project Description
 
@@ -17,13 +14,14 @@ Repository for wireless sensor data measurement system.
 
 - For first phase of the measurement system, a temperature-pressure sensor (Bosch BMP280) with a rpi PicoW board will be used for wirelessly transmitting data to a server (using MQTT/HTTP).
 - Initial data logging system will be based on CSV files, later logging systems will move from CSV to SQL/Time Series DB (Postgre SQL / Influx DB)
-- Backend logic for FSA, HSA and other Time-series data analysis functions will be implemented in Python.
+- Backend logic for FSA, HSA and other Time-series data analysis functions will be implemented in Python/JavaScript.
 - Initial data manipulation and visualization will be done using Python and Jupyter Notebooks
-- GUI implementation will be done on rpi for interaction with the measurement system (HTML5 based) in the later prototypes 2,3 ....
+- GUI implementation will be done on rpi for interaction with the measurement system (HTML5 or React based) in the later prototypes 2,3 ....
 - Experiments with system architechture will be done by trying and changing communication protocols- (MQTT, HTTP Restful APIs), sensor data logging system (CSV, PostgreSQL, InfluxDB), Data Visualization System (Jupyter notebooks, PowerBI, HTML GUI based pages)
 
-  System Architechture
+### Measurement System | Phase 1 | Prototype - 1 | System Architechture
 
+![System Architechture](Project_library/Measurement_System_Phase_01/Images_Diagrams_Schematics/Images_Schematics/MS1_Phase1_P1_Sys_Architechture_V1.jpg)
 
 #### Measurement System Phase II
 
@@ -37,11 +35,11 @@ Repository for wireless sensor data measurement system.
 - Upload of data to the cloud account/remote server.
 
 
-#### Hardware specifications for custom:
+#### Hardware specifications for custom PCB:
 
   Prtotype I
 
-  - PCB with ESP32/RP2040 | (Wroom/Wrover module), ESP32S series, PicoW board
+  - PCB with ESP32/RP2040 | (Wroom/Wrover module), ESP32 S,C series, PicoW board
   - UART-USB bridge | (CP2102)
   - Inbuilt accelerometer/IMU unit | (SPI/I2C)
   - Inbuilt temperature, humidity, pressure sensor | (Bosch BME280, BMP280 series)
