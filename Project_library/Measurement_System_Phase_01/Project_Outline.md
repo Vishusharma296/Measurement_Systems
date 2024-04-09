@@ -6,43 +6,48 @@ Tasks to achieve:
 
 # Project 1: Wireless Sensor Data Measurement and Visualization System 
 
-Project Goal: To build a measurement system with RP picoW board, RP400, BMP280 sensor and other hardware
+Project Goal for phase 1: To build a sensor data acquisition, measurement and visualization system with RP picoW board, RP400, BMP280 sensor and other hardware
   
   #### Features: 
   
   - Wirelessly transmit the sensor data to RP400 1) Using MQTT , 2) Using HTTP
   - Log the data in CSV files 1) - Using node red, 2) - Using python scripts
-  - Display the data on a dashboard from 1) Node - Red, HTML based page
+  - data Visualization: Display the data on a dashboard from 1) Node-red dashboards, Grafana dashboards, HTML based pages
   - Presentation: Option to download images from specific timestamps, option to save data in CSV
-  - Networking: Dashboard accesible to other non-admin user via HTTP/API/MQTT
-  - Building a local data server on RP400
+  - Networking: Dashboard should be accesible to other non-admin user via HTTP/APIs/MQTT
+  - Building a local data server on RP400 using CSV files, TS DB, SQL DB
   
-## Skills to learn
+## Required Skills for Project
  
  - HTTP Protocol (python and micropython libraries)
  - MQTT Protocol
  - Working with HTML
  - Working with concurrent programming in Micropython
- - Node-red dashboard - creation and accesing it remotely
+ - ~~Node-red dashboard - creation and accesing it remotely~~
  - Github - Project documentation Markdown files, CLI commands, Branches, Security
  - Working with APIs in Python and Micropython
- - Designing a GUI in Python (TKinter)
+ - ~~Designing a GUI in Python (TKinter)~~
  - SQL and database systems
- - Python Django framework
- - PostgreSQL
+ - ~~Python Django framework~~
  - Time Series Database - InfluxDB
+ - PostgreSQL
  - Graffana Dashboard
+ - React.js for data visulaization and charts
  
-## Subproject 1.1) HTTP and MQTT in Micro Python 
+## Subproject 1.1) Communication Protocols: HTTP and MQTT in Python and MicroPython 
 
 ### HTTP
 
+- HTTP requests - GET, POST, UPDATE, DELETE
 - urequest 
 - ujson
 
 ### MQTT
 
 - Pub-sub model
+- Broker-client relation
+- MQTT control packets
+- QoS (Quality of Service)
 - umqtt
 - Mosquito broker
 - Paho Client
@@ -70,9 +75,16 @@ Project Goal: To build a measurement system with RP picoW board, RP400, BMP280 s
 - Callbacks
 - Design of concurrency model
 
-## Subproject 1.3) HTML 
+## Subproject 1.3) Data visualisation using: Jupyter Notebooks, HTML pages, Node-Red dashboards, Grafana dashboards, React.js charts 
 
-#### HTML
+### Jupyter Notebooks
+
+- Markdown
+- Python libraries and modules
+- Handling relational data from sensors with NumPy, SciPy, Pandas dataframes and Polars
+- Data visualization using Matplotlib, Seaborn and Plotly express  
+
+### HTML
 
 - HTML - opening and closing tags 
 - Index     
@@ -95,26 +107,30 @@ Project Goal: To build a measurement system with RP picoW board, RP400, BMP280 s
 - Responsive Webdesign
 - Web accesibility and Aria roles
 
-## subproject 1.4) Database system
+### Grafana Dashboards
 
-- Local server and CSV files
-- PostgreSQL
-- Influx DB
+### React Framework
 
+## Subproject 1.4) Sensor Data Logging System - Node-red flow based CSV files, Time-Series Databse, SQL Database 
 
-## Subproject 1.5) Node-Red flows and creating dashboards
+### Storing data using Node-Red flows
 
-Tasks: Create a Node Red dashboard which displays the sensor data
+- Local MQTT server and Client in Node-red/Python scripts
+- Data logging in CSV files by using Node-red flows
 - Node-red basics : [Node-red](https://nodered.org/)
 - Node-red inbuilt dashboards
 - Graffana Dashboards : [Grafana](https://grafana.com/docs/grafana/latest/)
 - Flowfuse dashboards : [Flowfuse](https://flows.nodered.org/node/@flowfuse/node-red-dashboard)
 
+### Influx DB
+
+### PostgreSQL
+
 ## Subproject 1.7) Github 
 
 - Github basics [Github](https://docs.github.com/en)
 - Installing Git
-- Configuring Git with email, SSH keys
+- Configuring Git with email, HTTP/SSH keys on local machine
 - Documentation via Markdown, Project management
 - Version control via branching
 - Collaboration
