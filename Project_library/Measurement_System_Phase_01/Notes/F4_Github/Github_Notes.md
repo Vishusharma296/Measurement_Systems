@@ -1,5 +1,7 @@
 ** Github Basic Notes **
 
+Git is an open source version control sytem used to keep track of changes in repositories, bugs in code and rollbacks of repositories to previous versions.
+
 ## GitHub Basics:
 
 - **Repositories**: 
@@ -73,3 +75,9 @@
 | `git reset <file>`        | Reset current HEAD to the specified state.                                                |
 | `git rm <file>`           | Remove files from the working tree and from the index.                                     |
 | `git config`              | Get and set repository or global options.                                                  |
+
+
+## YouTube Tutorials:
+
+- [How to upload a project/folder to github](https://www.youtube.com/watch?v=p8bZBvcFPuk&lc=UgwQlQmQQWOdjxRbroB4AaABAg.A1zNvtncqmKA207le2ZizF)
+- [Github for Beginners](https://www.youtube.com/watch?v=RGOj5yH7evk&t=181s)
