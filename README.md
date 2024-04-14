@@ -20,10 +20,14 @@ Repository for wireless sensor data measurement system.
 
 ![System Architechture](Project_library/Measurement_System_Phase_01/Images_Diagrams_Schematics/Images_Schematics/MS1_Phase1_P1_Sys_Architechture_V1.jpg)
 
+
 #### Measurement System Phase II
 
-- Implementation of the measurement system backend logic (With reduced functionalities) on $10 Microcontroller like ESP32 / RP PicoW in MicroPython/Arduino framework. (Edge Computing)
+- Implementation of the measurement system backend logic (With reduced functionalities) on inexpensive $10-20 computer like ESP32 / RP PicoW / RPzeroW2 in MicroPython/Arduino framework. (Edge Computing)
 - Running the board on battery source and visualization of results via Mobile device using a Wifi Connection
+- Implementation of the data visualization system using React (Native)
+- Implementation of the whole Measurement system using containerization with Docker.
+- Assigning Static IP address to the MQTT/HTTP Server
 
 #### Measurement System Phase III
 
