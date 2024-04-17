@@ -1,0 +1,115 @@
+[
+    {
+        "id": "edfd548fd7209b9f",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "bc9928d7d92675c1",
+        "type": "mqtt in",
+        "z": "edfd548fd7209b9f",
+        "name": "",
+        "topic": "Pseudo/#",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "1d2207fb7fd87b77",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 240,
+        "y": 260,
+        "wires": [
+            [
+                "56f06694e92b7b55",
+                "a09ca71d6517b49a"
+            ]
+        ]
+    },
+    {
+        "id": "56f06694e92b7b55",
+        "type": "debug",
+        "z": "edfd548fd7209b9f",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 440,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "35bfc718c9658b8c",
+        "type": "file",
+        "z": "edfd548fd7209b9f",
+        "name": "SD_04.04.2024_CSVFile",
+        "filename": "/home/vishu_RP400/RP400_Sandbox_Git/Measurement system/Sensor Data/SD_04.04.2024_CSVFile.csv",
+        "filenameType": "str",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "utf8",
+        "x": 750,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a09ca71d6517b49a",
+        "type": "csv",
+        "z": "edfd548fd7209b9f",
+        "name": "Sensor CSV data",
+        "sep": ",",
+        "hdrin": true,
+        "hdrout": "once",
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "Message Type, Temperature_C, Message Number, Pressure_P",
+        "skip": "0",
+        "strings": false,
+        "include_empty_strings": true,
+        "include_null_values": true,
+        "x": 470,
+        "y": 340,
+        "wires": [
+            [
+                "35bfc718c9658b8c"
+            ]
+        ]
+    },
+    {
+        "id": "1d2207fb7fd87b77",
+        "type": "mqtt-broker",
+        "name": "Raspberry Pi400",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    }
+]
