@@ -1,6 +1,7 @@
 # Influx DB
 
 [Official Influx DB documentation](https://docs.influxdata.com/influxdb/v2/)
+[InfluxDB installation tutorial](https://randomnerdtutorials.com/install-influxdb-2-raspberry-pi/)
 
 ## Basics of InfluxDB and Time-Series Database
 
