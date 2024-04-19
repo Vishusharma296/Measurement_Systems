@@ -1,20 +1,19 @@
 # Influx DB
 
-[Official Influx DB documentation](https://docs.influxdata.com/influxdb/v2/)
+[Official Influx DB documentation](https://docs.influxdata.com/influxdb/v2/)\
 [InfluxDB installation tutorial](https://randomnerdtutorials.com/install-influxdb-2-raspberry-pi/)
 
 ## Basics of InfluxDB and Time-Series Database
 
-Time series data is a sequence of data points indexed in time order. InfluxDB is an open-source time series database designed to handle high write and query loads for time-stamped data.
-It is optimized for fast, high-availability storage and retrieval of time series data in fields such as industrial sensor data monitoring, server performance metrics, sensor data, real-time analytics for finance etc.
+Time series data is a sequence of data points indexed in time order. InfluxDB is an open-source time series database designed to handle high write and query loads for time-stamped data. It is optimized for fast, high-availability storage and retrieval of time series data in fields such as industrial sensor data monitoring, server performance metrics, real-time analytics for finance etc.
 
 ### Key features of InfluxDB
 
-- Time Series data handling (automatic insertion of timestamp)
-- Schemaless design
+- Time Series data handling (with automatic insertion of timestamp)
+- Schemaless design (unlike SQL, no prior schema required)
 - Retenetion policies for data
-- Continous Queries
-- High availability and scalability with cluster
+- Continous queries
+- High availability and scalability with the use of InfluxDB cluster
 - Integration with other software platforms like Node-red, Grafana, Telegraf, Chronograf, Kapacitor
 
 ### Key Concepts for InfluxDB
@@ -32,11 +31,11 @@ It is optimized for fast, high-availability storage and retrieval of time series
 
 ### 1. Foundation of Time Series Data and InfluxDB Basics
 
-- **Objective**: Understand the fundamentals of time series data and InfluxDB's architecture so that it can be implemented for the Measurement system database.
+- **Objective**: To understand the fundamentals of time series data and InfluxDB's architecture so that it can be implemented for the Measurement system database.
 
   - Reading time series database, its need and comparison with traditional SQL databases
   - Learn about InfluxDB's features, data model, and use cases.
-  - Key components of InfluxDB: Databases, measurements, tags, fields.
+  - Key components of InfluxDB: Databases, buckets, measurements, tags, fields.
 
 ### 2. Installation and Setup
 
@@ -44,7 +43,7 @@ It is optimized for fast, high-availability storage and retrieval of time series
 
   - Install InfluxDB Raspberry Pi
   - Configure and start InfluxDB service (automatic start).
-  - Access the InfluxDB CLI, InfluxDB UI (localhost:8086) and later InfluxDB HTTP API
+  - Accessing the InfluxDB using CLI, InfluxDB UI (localhost:8086) and later InfluxDB HTTP API
 
 ### 3. Basic Operations and Queries
 
@@ -54,6 +53,14 @@ It is optimized for fast, high-availability storage and retrieval of time series
   - Insert data into InfluxDB using Node-red.
   - Retrieve and query 
 
+### 4. Data logging using Node-red and python scripts
+
+- **Objective**: Using InfluxDB for real-time monitoring of sensor data.
+  
+  - Use Python scripts to log the incoming MQTT messages from the sensor nodes into the database
+  - Exploring visualization options using Grafana and other tools.
+
+ 
 ### 4. Data Management
 
 - **Objective**: Understand how to manage data effectively in InfluxDB.
@@ -62,11 +69,6 @@ It is optimized for fast, high-availability storage and retrieval of time series
   - Data downsampling and aggregation.
   - Best practices for data organization
     
-### 5. Monitoring and Alerting
-
-- **Objective**: Using InfluxDB for real-time monitoring of sensor data.
-  
-  - Exploring visualization options using Grafana.
 
 ### 6. Advanced Topics
 
@@ -80,7 +82,7 @@ It is optimized for fast, high-availability storage and retrieval of time series
 | Command                                           | Description                                                                   |
 |---------------------------------------------------|-------------------------------------------------------------------------------|
 | `sudo apt install curl apt-transport-https`       | Install necessary packages (`curl` and `apt-transport-https`) for InfluxDB installation.|
-| `curl -sL https://repos.influxdata.com/influxdb.key | sudo apt-key add -` | Download and add the InfluxDB repository key to the system's list of trusted keys.|
+| `curl -sL https://repos.influxdata.com/influxdb.key  sudo apt-key add -` | Download and add the InfluxDB repository key to the system's list of trusted keys.|
 | `sudo apt install influxdb`                       | Install InfluxDB package.                                                      |
 | `sudo systemctl start influxdb`                   | Start the InfluxDB service.                                                    |
 | `sudo systemctl enable influxdb`                  | Enable InfluxDB service to start on boot.                                      |
@@ -116,10 +118,33 @@ It is optimized for fast, high-availability storage and retrieval of time series
 | `SHOW STATS`                                        | Show statistics and performance metrics for InfluxDB.                          |
 
 
+### Working Influxdb in python
+
+- Installation of InfluxDB using pip: `pip install influxdb`
+- Importing the InfluxDB client: `from influxdb import InfluxDBClient`
+- Initializing the InfluxDB client: `client = InfluxDBClient(host='...', port=8086, username='...', password='...', database='...')`
+
+List of commands and function for working with InfluxDB in Python:
+
+| Function                           | Description                                                                                     |
+|------------------------------------|-------------------------------------------------------------------------------------------------|
+| `InfluxDBClient`                   | Initialize an InfluxDB client object to connect to an InfluxDB instance.                       |
+| `client.create_database()`         | Create a new database in InfluxDB.                                                              |
+| `client.drop_database()`           | Delete an existing database in InfluxDB.                                                        |
+| `client.write_points()`            | Write data points (measurement, tags, fields) into InfluxDB.                                    |
+| `client.query()`                   | Send a query to InfluxDB and retrieve results.                                                  |
+| `client.create_retention_policy()`  | Create a retention policy for a database, specifying data retention duration and replication.  |
+| `client.drop_retention_policy()`    | Delete a retention policy from a database.                                                      |
+| `client.get_list_database()`        | Get a list of databases available in the InfluxDB instance.                                      |
+| `client.get_list_measurements()`    | Get a list of measurements (tables) within a database.                                           |
+| `client.get_list_retention_policies()` | Get a list of retention policies defined for a database.                                       |
+| `client.switch_database()`         | Switch to a different database within the same InfluxDB client instance.                        |
+| `client.close()`                    | Close the connection to InfluxDB.                                                               |
+
+
 
 ### Learning Resources
 
-[Telegraf Documentation](https://docs.influxdata.com/telegraf/v1/)
+[Telegraf Documentation](https://docs.influxdata.com/telegraf/v1/)\
 [Influx DB Documentation](https://docs.influxdata.com/influxdb/v2/)
-
 
