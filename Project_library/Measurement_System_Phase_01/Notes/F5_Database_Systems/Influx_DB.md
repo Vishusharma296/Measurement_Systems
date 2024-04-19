@@ -84,6 +84,7 @@ Time series data is a sequence of data points indexed in time order. InfluxDB is
 | `sudo apt install curl apt-transport-https`       | Install necessary packages (`curl` and `apt-transport-https`) for InfluxDB installation.|
 | `curl -sL https://repos.influxdata.com/influxdb.key  sudo apt-key add -` | Download and add the InfluxDB repository key to the system's list of trusted keys.|
 | `sudo apt install influxdb`                       | Install InfluxDB package.                                                      |
+| `sudo apt install influxdb-client`                | Install InfluxDB client.                                                      |
 | `sudo systemctl start influxdb`                   | Start the InfluxDB service.                                                    |
 | `sudo systemctl enable influxdb`                  | Enable InfluxDB service to start on boot.                                      |
 | `influx`                                          | Launch the InfluxDB command line interface (CLI).                              |
