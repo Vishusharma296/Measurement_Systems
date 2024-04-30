@@ -24,7 +24,8 @@ Grafana is an interactive visualization web application that allows users to que
 
 ## Grafana Documentation
 - [Grafana Introduction](https://grafana.com/docs/grafana/latest/)
-- [Grafana Installation Guide](https://grafana.com/docs/grafana/latest/setup-grafana/installation/debian/)
+- [Grafana Installation Guide- Linux: Ubuntu/Debian](https://grafana.com/docs/grafana/latest/setup-grafana/installation/debian/)
+- [Grafana Installation Guide- Linux: Raspberry Pi](https://grafana.com/tutorials/install-grafana-on-raspberry-pi/)
 - [Grafana data Source - CSV](https://grafana.com/docs/plugins/marcusolsson-csv-datasource/latest/)
 - [Grafana data Source - InfluxDB](https://grafana.com/docs/grafana/latest/datasources/influxdb/)
 - [Grafana data Source - Postgre SQL](https://grafana.com/docs/grafana/latest/datasources/postgres/).
