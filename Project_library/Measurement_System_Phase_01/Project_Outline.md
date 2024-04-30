@@ -109,6 +109,8 @@ Project Goal for phase 1: To build a sensor data acquisition, measurement and vi
 
 ### Grafana Dashboards
 
+See detailed notes on Grafana in Data Visualization
+
 ### React Framework
 
 ## Subproject 1.4) Sensor Data Logging System - Node-red flow based CSV files, Time-Series Databse, SQL Database 
@@ -120,9 +122,11 @@ Project Goal for phase 1: To build a sensor data acquisition, measurement and vi
 - Node-red basics : [Node-red](https://nodered.org/)
 - Node-red inbuilt dashboards
 - Graffana Dashboards : [Grafana](https://grafana.com/docs/grafana/latest/)
-- Flowfuse dashboards : [Flowfuse](https://flows.nodered.org/node/@flowfuse/node-red-dashboard)
+- Flowfuse Dashboards : [Flowfuse](https://flows.nodered.org/node/@flowfuse/node-red-dashboard)
 
 ### Influx DB
+
+See detailed notes on Influx DB in Database Systems
 
 ### PostgreSQL
 

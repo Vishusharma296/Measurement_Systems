@@ -1,31 +1,37 @@
 # Measurement System Phase II
 
-The theme of this phase -02 is computation and algorithms. 
+The main theme of the Project Phase II is computation and algorithms. 
 
+## Key Tasks
+- Retrieve the data stored in the database (InfluxDB/Postgre SQL) using Python Scripts
+- Plot the data and results of the analysis using the standard python plotting tools
+- 
 
-### Basics of Time series data
+## Skills Required
 
-### Analysis of Time series data
-
-### Data Analysis using conventional approach: 
+### 1) Basics of Time series data analysis
 
 - Time domain algorithms 
 - Timestamps | ISO8601 format, TZ format
 - ARIMA like models
-- Trend and seasonality
-- Pattern recognition
+- Trend and Seasonality
+- Pattern Recognition
+
+### 2) Data Analysis using non-conventional approach: 
 
 - Frequency domain methods
-- Fourier Analysis
-- Time-Frequency domain
+- Fourier Analysis - DFT computation, FFT Implementation
+- Time-Frequency domain analysis
 - Spectrograms
 - Hilbert Huang Transform
 - Hilbert Spectral Analysis
-- variants of HHT
+- Variants of HHT and EMD
 
+### 3) Data analysis using ML models
 
-### Data analysis using ML models
-
+- Machine Learning Basics 
+- Machine learning for time series data
 - Common ML models for analysing time-series data
-- Facebook prophet
+- Scikit Learn
 - XGBoost
+- Facebook prophet
