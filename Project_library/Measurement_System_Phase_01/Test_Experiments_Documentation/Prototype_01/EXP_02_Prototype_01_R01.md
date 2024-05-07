@@ -1,4 +1,4 @@
-# Experiment 02, Run 01 
+# Experiment 02, Prototype-01, Run 01 
 
 ## Detailed Description of Experiment 02 
 
@@ -7,7 +7,7 @@
 - The Node-RED flow parses the incoming JSON messages and converts them into CSV format as well as into measurements for InfluxDB.
 - So now the Measurement System logs the data into CSV as well as into the InfluxDB database.
 - In the firmware on the publishing sensor node, JSON message structure is changed to accomodate a unique device ID (DevUID).
-- This DevUID is same as client ID of MQTT publishing client. MQTT Topic structure is also improved withe concept of logical hierarchy
+- This DevUID is same as client ID of MQTT publishing client. MQTT Topic structure is also improved by using the concept of logical hierarchy
 - Grafana visualization system was installed on RP400 to visualize the data in real time by using charts and the guages.
 
 ### Software Description
@@ -95,7 +95,7 @@ The Node-RED flow used in this experiment has two sub flows. First subflow conve
 
 #### Experiment  04
 
-**Goals** : Program another picoW board to do the following tasks:
+**Goals** : Program another picoW /ESP32 board to do the following tasks:
 Task1: Read ADC value from one of the pins 10-1000 times every second (Say antenna)
 Task2: Store the data into a vector
 Task3: Perform FFT for the incoming signal in real time.
