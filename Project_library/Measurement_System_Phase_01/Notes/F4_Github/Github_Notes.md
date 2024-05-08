@@ -1,6 +1,6 @@
 ** Github Basic Notes **
 
-Git is an open source version control sytem used to keep track of changes in repositories, bugs in code and rollbacks of repositories to previous versions.
+Git is an open source version control system used to keep track of changes in repositories, bugs in code and rollbacks of repositories to previous versions.
 
 ## GitHub Basics:
 
@@ -16,7 +16,7 @@ Git is an open source version control sytem used to keep track of changes in rep
 ### GitHub Features:
 
 - **Issues**: 
-  - Issues are used to track tasks, bugs, and feature requests. They can be assigned to team members, labeled, and discussed.
+  - Issues are used to track tasks, bugs, and feature requests. They can be assigned to team members, labelled, and discussed.
 - **Projects**: 
   - Projects help you organize and prioritize work with customizable boards. You can create tasks, track progress, and visualize workflows.
 - **Wiki**: 
