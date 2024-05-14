@@ -13,13 +13,16 @@ Repository for wireless sensor data measurement system.
 - Initial data logging system will be based on CSV files, later logging systems will move from CSV to SQL/Time Series DB (Postgre SQL / Influx DB)
 - Backend logic for FSA, HSA and other Time-series data analysis functions will be implemented in Python/JavaScript.
 - Initial data manipulation and visualization will be done using Python and Jupyter Notebooks
-- GUI implementation will be done on rpi for interaction with the measurement system (HTML5 or React based) in the later prototypes 2,3 ....
-- Experiments with system architechture will be done by trying and changing communication protocols- (MQTT, HTTP Restful APIs), sensor data logging system (CSV, PostgreSQL, InfluxDB), Data Visualization System (Jupyter notebooks, PowerBI, HTML/React based GUI)
+- GUI dashboard implementation will be done on Rpi400 for interaction with the measurement system (Grafana based) in the later prototypes 2,3 ....
+- Experiments with system architechture will be done by trying and changing communication protocols- (MQTT, HTTP Restful APIs), sensor data logging system (CSV, PostgreSQL, InfluxDB), Data Visualization System (Jupyter notebooks, Grafana Dashboards, PowerBI, HTML/React based GUI)
 
 ### Measurement System | Phase 1 | Prototype - 1 | System Architechture
 
 ![System Architechture](Project_library/Measurement_System_Phase_01/Images_Diagrams_Schematics/Images_Schematics/MS1_Phase1_P1_Sys_Architechture_V1.jpg)
 
+### Measurement System | Phase 1 | Prototype - 2 | System Architechture
+
+![MS1_Phase1_P2_Schematic](https://github.com/Vishusharma296/Measurement_Systems/assets/73486657/b1e0548d-e35a-42d7-b2d7-463cc09cab6e)
 
 #### Measurement System Phase II
 
