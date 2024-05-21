@@ -1,0 +1,318 @@
+[
+    {
+        "id": "9146e0930960a3ec",
+        "type": "tab",
+        "label": "MS_PH1_NR_flow_V02",
+        "disabled": false,
+        "info": "Measurement System phase 1",
+        "env": []
+    },
+    {
+        "id": "8d0b2323fb3d2066",
+        "type": "debug",
+        "z": "9146e0930960a3ec",
+        "name": "debug CSV",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 510,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "6b9442d282845dae",
+        "type": "file",
+        "z": "9146e0930960a3ec",
+        "name": "SD_CSV_File",
+        "filename": "/home/vishu_RP400/RP400_Sandbox_Git/Measurement system/Sensor Data/SD_Test-03_CSVFile.csv",
+        "filenameType": "str",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "utf8",
+        "x": 800,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c1813f857fbf9b26",
+        "type": "csv",
+        "z": "9146e0930960a3ec",
+        "name": "Device_01 JSON to CSV",
+        "sep": ",",
+        "hdrin": true,
+        "hdrout": "once",
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "DevUID,MQTT_Topic,Message_counter,Temperature_C,Pressure_P",
+        "skip": "0",
+        "strings": false,
+        "include_empty_strings": true,
+        "include_null_values": true,
+        "x": 550,
+        "y": 260,
+        "wires": [
+            [
+                "6b9442d282845dae"
+            ]
+        ]
+    },
+    {
+        "id": "97e5bfb8b8dc9ac3",
+        "type": "influxdb out",
+        "z": "9146e0930960a3ec",
+        "influxdb": "c6e8717f6d34d6c0",
+        "name": "SensorDB01 Message Counter",
+        "measurement": "Sensor/BMP280-01/Message_counter",
+        "precision": "ms",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 990,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "f7e1c80edab5054b",
+        "type": "comment",
+        "z": "9146e0930960a3ec",
+        "name": "Login Credentials",
+        "info": "#Login Credentials\n\n## Infludb credentials:\nusername: admin\nPassword : Sensor-System",
+        "x": 240,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "d19b394137934066",
+        "type": "mqtt in",
+        "z": "9146e0930960a3ec",
+        "name": "",
+        "topic": "Sensor/BMP280-01/#",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "1d2207fb7fd87b77",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 260,
+        "y": 260,
+        "wires": [
+            [
+                "8d0b2323fb3d2066",
+                "c1813f857fbf9b26"
+            ]
+        ]
+    },
+    {
+        "id": "10622bfd6ac56273",
+        "type": "mqtt in",
+        "z": "9146e0930960a3ec",
+        "name": "",
+        "topic": "Sensor/BMP280-01/#",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "1d2207fb7fd87b77",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 260,
+        "y": 480,
+        "wires": [
+            [
+                "a53bc1804f6f3001",
+                "7f83037fa2e466a6",
+                "f2c44c2e1399cdfb",
+                "1533e570a96c502a"
+            ]
+        ]
+    },
+    {
+        "id": "1533e570a96c502a",
+        "type": "debug",
+        "z": "9146e0930960a3ec",
+        "name": "debug SensorDB01",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 550,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "a53bc1804f6f3001",
+        "type": "change",
+        "z": "9146e0930960a3ec",
+        "name": "Temperature_C",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.Temperature_C",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 540,
+        "y": 560,
+        "wires": [
+            [
+                "4b58a8af27e9a33a"
+            ]
+        ]
+    },
+    {
+        "id": "7f83037fa2e466a6",
+        "type": "change",
+        "z": "9146e0930960a3ec",
+        "name": "Pressure_P",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.Pressure_P",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 530,
+        "y": 640,
+        "wires": [
+            [
+                "0fed2e07bc35d80d"
+            ]
+        ]
+    },
+    {
+        "id": "f2c44c2e1399cdfb",
+        "type": "change",
+        "z": "9146e0930960a3ec",
+        "name": "Message_counter",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.Message_counter",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 550,
+        "y": 480,
+        "wires": [
+            [
+                "97e5bfb8b8dc9ac3"
+            ]
+        ]
+    },
+    {
+        "id": "4b58a8af27e9a33a",
+        "type": "influxdb out",
+        "z": "9146e0930960a3ec",
+        "influxdb": "c6e8717f6d34d6c0",
+        "name": "SensorDB01 Temperature",
+        "measurement": "Sensor/BMP280-01/Temperature",
+        "precision": "ms",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 970,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "0fed2e07bc35d80d",
+        "type": "influxdb out",
+        "z": "9146e0930960a3ec",
+        "influxdb": "c6e8717f6d34d6c0",
+        "name": "SensorDB01 Pressure",
+        "measurement": "Sensor/BMP280-01/Pressure",
+        "precision": "ms",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 960,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "c6e8717f6d34d6c0",
+        "type": "influxdb",
+        "hostname": "127.0.0.1",
+        "port": "8086",
+        "protocol": "http",
+        "database": "SensorDB01",
+        "name": "SensorDB01",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "1.x",
+        "url": "http://localhost:8086",
+        "timeout": "10",
+        "rejectUnauthorized": true,
+        "credentials": {}
+    },
+    {
+        "id": "1d2207fb7fd87b77",
+        "type": "mqtt-broker",
+        "name": "Raspberry Pi400",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    }
+]
