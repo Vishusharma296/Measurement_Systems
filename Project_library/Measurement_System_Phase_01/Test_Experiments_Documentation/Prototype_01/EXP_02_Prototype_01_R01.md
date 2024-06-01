@@ -108,21 +108,32 @@ influx -username admin -password *****
 ### Data analysis 
 
 **Run 01**
-- Duration: 01.05.2024 - 
+- Duration: 01.05.2024 - 01.06.2024
 - Polling frequency for sensor: 30 sec
-- Total number of samples: 40,000+ ...continued
+- Total number of samples: 81,496
 
 **Data Visualization: desscription of Grafana dashboard**
 
 ![MS_PH01_P1_Grafana_Dashboard_V1](https://github.com/Vishusharma296/Measurement_Systems/assets/73486657/d5c2e696-8133-4c95-a9f3-cffb35018f67)
+![MS_PH01_P1_Grafana_Dashboard_V_Final](https://github.com/Vishusharma296/Measurement_Systems/assets/73486657/c09a531c-3129-4a61-a9cb-e774c4ef3e2c)
 
 ### Limitations of the current network architechture:
 
 - Data is sent as without encryption as plain JSON text message to the MQTT broker
 - Telemetry data stops when the connection to WLAN is interrupted for MQTT broker (RPI400) and the publisher node (RPI picoW-01)
 - Quality of the firmware is poor. It uses too much energy. A fully charged 10,000 mAh power bank runs for about(... reading and ... days)
+- LED was blinking even when the message was not published successfully
 
-### Planned changes for further Experiments:
+
+
+#### Prototype 01 Experiment 02 Tasks
+
+- [x] Use Python Scripts to make connection to the Broker and subscribing to specific topics on which sensor node is publishing
+- [x] Use Python Scripts to log the sensor data instead of/in addition to Node-RED. Convert the received JSON messages into CSV for logging.
+- [x] Use Python Scripts to extract the sensor data from influxdb Database
+
+### Planned changes for further Experiments and prototypes:
+
 
 #### Possible improvement in firmware
 
@@ -135,20 +146,20 @@ influx -username admin -password *****
 - [ ] Learn about the Grafana Kiosk mode.
 - [ ] Try to access the Grafana dashboard from a computer outside the local network.
 
-#### Prototype 01 Experiment 03 Plan
 
-- [x] Use Python Scripts to make connection to the Broker and subscribing to specific topics on which sensor node is publishing
-- [x] Use Python Scripts to log the sensor data instead of/in addition to Node-RED. Convert the received JSON messages into CSV for logging.
+#### Prototype 02 Experiment 01 Plan
+- [ ] Create another node with LDR and internal temperature sensor
 - [ ] Use Python scripts to log the Data into influx DB instead of/in addition to Node-RED
 - [ ] Program the temperature pressure node picoW-01 with concurrent programming.
-- [ ] PicoW takes temperature and pressure reading every 10-30 seconds.
+- [ ] PicoW-01 takes temperature and pressure reading every 10-30 seconds.
 - [ ] Stores the readings on the local buffer on PicoW board
 - [ ] Try to connect with WiFi every 5-10 minutes and flash the onboard LED for 1-2 seconds when connection is made.
 - [ ] Try to connect and publish data to MQTT broker every 5-10 minutes and flash the onboard LED for 1-2 seconds when data is sent.
 
-#### Experiment  04
+#### Prototype 02 Experiment 02 Plan
 
-**Goals** : Program another picoW /ESP32 board to do the following tasks:
+**Goals** 
+: Program another picoW /ESP32 board to do the following tasks:
 - [ ] Task1: Read ADC value from one of the pins 10-1000 times every second (Say antenna)
 - [ ] Task2: Store the data into a vector
 - [ ] Task3: Perform FFT for the incoming signal in real time.
